@@ -10,8 +10,8 @@
 #include <openvr_driver.h>
 #endif
 
-#define OPENVR_SPACECALIBRATOR_PIPE_NAME "\\\\.\\pipe\\OpenVRSpaceCalibratorDriver"
-#define OPENVR_SPACECALIBRATOR_SHMEM_NAME "OpenVRSpaceCalibratorPoseMemoryV1"
+#define OPENVR_SpaceCalibrator2_PIPE_NAME "\\\\.\\pipe\\OpenVRSpaceCalibrator2Driver"
+#define OPENVR_SpaceCalibrator2_SHMEM_NAME "OpenVRSpaceCalibrator2PoseMemoryV1"
 
 #ifdef _OPENVR_API 
 

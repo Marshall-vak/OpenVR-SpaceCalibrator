@@ -1,4 +1,4 @@
-#include "OpenVR-SpaceCalibratorDriver.h"
+#include "OpenVR-SpaceCalibrator2Driver.h"
 #include "ServerTrackedDeviceProvider.h"
 #include "VRWatchdogProvider.h"
 #include "Logging.h"
@@ -7,7 +7,7 @@
 #include <cstring>
 #include <openvr_driver.h>
 
-OPENVRSPACECALIBRATORDRIVER_API void *HmdDriverFactory(const char *pInterfaceName, int *pReturnCode)
+OPENVRSpaceCalibrator2DRIVER_API void *HmdDriverFactory(const char *pInterfaceName, int *pReturnCode)
 {
 	TRACE("HmdDriverFactory(%s)", pInterfaceName);
 

@@ -27,7 +27,7 @@ vr::EVRInitError ServerTrackedDeviceProvider::Init(vr::IVRDriverContext *pDriver
 
 	InjectHooks(this, pDriverContext);
 	server.Run();
-	shmem.Create(OPENVR_SPACECALIBRATOR_SHMEM_NAME);
+	shmem.Create(OPENVR_SpaceCalibrator2_SHMEM_NAME);
 
 	debugTransform = Eigen::Vector3d::Zero();
 	debugRotation = Eigen::Quaterniond::Identity();

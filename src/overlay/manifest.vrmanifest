@@ -1,15 +1,15 @@
 {
 	"source" : "builtin",
 	"applications": [{
-		"app_key": "pushrax.SpaceCalibrator",
+		"app_key": "pushrax.SpaceCalibrator2",
 		"launch_type": "binary",
-		"binary_path_windows": "SpaceCalibrator.exe",
+		"binary_path_windows": "SpaceCalibrator2.exe",
 		"is_dashboard_overlay": true,
 
 		"strings": {
 			"en_us": {
-				"name": "Space Calibrator",
-				"description": "Space Calibrator Overlay"
+				"name": "Space Calibrator 2",
+				"description": "Space Calibrator 2 Overlay"
 			}
 		}
 	}]

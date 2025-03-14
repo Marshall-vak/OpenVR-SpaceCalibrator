@@ -6,7 +6,7 @@ FILE *LogFile;
 
 void OpenLogFile()
 {
-	LogFile = fopen("space_calibrator_driver.log", "a");
+	LogFile = fopen("Space_Calibrator_2_driver.log", "a");
 	if (LogFile == nullptr)
 	{
 		LogFile = stderr;

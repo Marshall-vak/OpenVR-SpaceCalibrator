@@ -317,7 +317,7 @@ static void LogRegistryResult(LSTATUS result)
 	std::cerr << "Opening registry key: " << message << std::endl;
 }
 
-static const char *RegistryKey = "Software\\OpenVR-SpaceCalibrator";
+static const char *RegistryKey = "Software\\OpenVR-SpaceCalibrator2";
 
 static std::string ReadRegistryKey()
 {
@@ -365,7 +365,7 @@ void LoadProfile(CalibrationContext &ctx)
 	// @TODO: Rewrite this to migrate configs from the registry to the spacecal directory
 	//        I don't know why whoever wrote this thought writing to the registry in the 2020s was a good idea...
 	//        NOTE: HKEY_CURRENT_USER_LOCAL_SETTINGS evaluates to	HKCU\Software\Classes\Local Settings
-	//              Settings are currently stored at				HKCU\Software\Classes\Local Settings\Software\OpenVR-SpaceCalibrator
+	//              Settings are currently stored at				HKCU\Software\Classes\Local Settings\Software\OpenVR-SpaceCalibrator2
 
 	ctx.validProfile = false;
 

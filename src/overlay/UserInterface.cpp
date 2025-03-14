@@ -45,7 +45,7 @@ void BuildMainWindow(bool runningInOverlay_)
 	ImGui::SetNextWindowPos(ImVec2(0.0f, 0.0f), ImGuiCond_Always);
 	ImGui::SetNextWindowSize(io.DisplaySize, ImGuiCond_Always);
 
-	if (!ImGui::Begin("SpaceCalibrator", nullptr, bareWindowFlags))
+	if (!ImGui::Begin("SpaceCalibrator2", nullptr, bareWindowFlags))
 	{
 		ImGui::End();
 		return;
@@ -78,7 +78,7 @@ void ShowVersionLine() {
 		ImGui::EndChild();
 		return;
 	}
-	ImGui::Text("Space Calibrator v" SPACECAL_VERSION_STRING);
+	ImGui::Text("Space Calibrator 2 v" SPACECAL_VERSION_STRING);
 	if (runningInOverlay)
 	{
 		ImGui::SameLine();
@@ -179,7 +179,7 @@ void CCal_DrawSettings() {
 
 		ImGui::PushStyleColor(ImGuiCol_Text, ImGui::GetStyleColorVec4(ImGuiCol_TextDisabled));
 		ImGui::TextWrapped(
-			"SpaceCalibrator uses up to three different speeds at which it drags the calibration back into "
+			"SpaceCalibrator2 uses up to three different speeds at which it drags the calibration back into "
 			"position when drift occurs. These settings control how far off the calibration should be before going back to low speed (for "
 			"Decel) or going to higher speeds (for Slow and Fast)."
 		);
@@ -302,7 +302,7 @@ void CCal_DrawSettings() {
 			ImGui::PopID();
 
 			ImGui::PushStyleColor(ImGuiCol_Text, ImGui::GetStyleColorVec4(ImGuiCol_TextDisabled));
-			ImGui::TextWrapped("Controls how often SpaceCalibrator synchronises playspaces.");
+			ImGui::TextWrapped("Controls how often SpaceCalibrator2 synchronises playspaces.");
 			ImGui::PopStyleColor();
 			if (ImGui::IsItemHovered(0)) {
 				ImGui::SetTooltip("Controls how good the calibration must be before realigning the trackers.\n"

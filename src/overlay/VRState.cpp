@@ -109,7 +109,7 @@ int VRState::FindDevice(const std::string& trackingSystem, const std::string& mo
 		//   - If the device is not a HMD, the model and serial number ALSO are identical.
 		//   - If the device is the HMD, the model OR serial number are also identical.
 		// 
-		// This handles an edge case of some device drivers being poorly developed or misbehaving, returning bad data to SteamVR and in turn, Space Calibrator
+		// This handles an edge case of some device drivers being poorly developed or misbehaving, returning bad data to SteamVR and in turn, Space Calibrator 2
 		// e.g.   SteamLink sometimes reports the Quest Pro as either "Oculus Quest Pro" or "Oculus Quest2" as it's model string
 		//        It still reports the serial number correctly however as "VRLINKHMDQUESTPRO"!
 		if (device.trackingSystem == trackingSystem &&

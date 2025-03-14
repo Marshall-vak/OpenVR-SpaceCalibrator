@@ -231,7 +231,7 @@ namespace {
 void InitCalibrator()
 {
 	Driver.Connect();
-	shmem.Open(OPENVR_SPACECALIBRATOR_SHMEM_NAME);
+	shmem.Open(OPENVR_SpaceCalibrator2_SHMEM_NAME);
 }
 
 void ResetAndDisableOffsets(uint32_t id)

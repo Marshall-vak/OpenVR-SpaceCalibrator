@@ -5,13 +5,13 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 # This is your project name
-set(TARGET_NAME 01spacecalibrator)
+set(TARGET_NAME 02spacecalibrator2)
 
 # This is the name that the binary will be called (driver_freescuba)
 set(DRIVER_NAME "driver_${TARGET_NAME}")
 
-project(SpaceCalibratorDriver)
-message("SpaceCalibrator - Driver")
+project(SpaceCalibrator2Driver)
+message("SpaceCalibrator2 - Driver")
 
 function(GroupSourcesByFolder target)
     set(SOURCE_GROUP_DELIMITER "/")
@@ -101,10 +101,10 @@ endforeach()
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY $<1:${CMAKE_BINARY_DIR}/${DRIVER_NAME}/bin/${ARCH_TARGET}>)
 
-add_library(SpaceCalibratorDriver SHARED ${SOURCES_API} ${SOURCES_HEADERS})
-GroupSourcesByFolder(SpaceCalibratorDriver)
+add_library(SpaceCalibrator2Driver SHARED ${SOURCES_API} ${SOURCES_HEADERS})
+GroupSourcesByFolder(SpaceCalibrator2Driver)
 
-target_include_directories(SpaceCalibratorDriver
+target_include_directories(SpaceCalibrator2Driver
 	PRIVATE ${CMAKE_SOURCE_DIR}
     PRIVATE ${CMAKE_SOURCE_DIR}/src/common
     PRIVATE ${CMAKE_SOURCE_DIR}/src/driver
@@ -114,20 +114,20 @@ target_include_directories(SpaceCalibratorDriver
     PRIVATE ${CMAKE_SOURCE_DIR}/lib
     PRIVATE ${CMAKE_SOURCE_DIR}/lib/Eigen)
 
-target_link_libraries(SpaceCalibratorDriver
+target_link_libraries(SpaceCalibrator2Driver
 	PRIVATE ${OPENVR_LIBRARIES}
 	PRIVATE minhook)
 
-target_compile_definitions(SpaceCalibratorDriver
+target_compile_definitions(SpaceCalibrator2Driver
     PRIVATE NOMINMAX
     PRIVATE UNICODE
-    PRIVATE OPENVRSPACECALIBRATORDRIVER_EXPORTS
+    PRIVATE OPENVRSpaceCalibrator2DRIVER_EXPORTS
 )
-set_target_properties(SpaceCalibratorDriver PROPERTIES OUTPUT_NAME ${DRIVER_NAME})
+set_target_properties(SpaceCalibrator2Driver PROPERTIES OUTPUT_NAME ${DRIVER_NAME})
 
 # Copy driver assets to output folder
 add_custom_command(
-    TARGET SpaceCalibratorDriver
+    TARGET SpaceCalibrator2Driver
     PRE_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_directory
     ${CMAKE_SOURCE_DIR}/${DRIVER_NAME}
