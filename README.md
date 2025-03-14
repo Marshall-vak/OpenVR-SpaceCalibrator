@@ -4,6 +4,9 @@
   <img alt="Space Calibrator" src="https://github.com/hyblocker/OpenVR-SpaceCalibrator/blob/develop/.github/logo.png?raw=true">
 </picture>
 
+## Space Calibrator 2
+This is a fork of Space Calibrator that can run beside Space Calibrator. This is for the people that need multiple instances of space calibrator running at once and only for them. Useful for syncing more than 2 playspaces since spacecalibrator 2.0 is not out yet. If you would like Space Calibrator and dont already have an instance running please use [hyblockers fork](https://github.com/hyblocker/OpenVR-SpaceCalibrator)
+
 This program is designed to allow you to synchronise multiple playspaces with one another in SteamVR. This fork of Space Calibrator (spacecal) also supports [continuous calibration](#continuous-calibration).
 
 Continuous calibration is a tracking mode which automatically aligns playspaces together, using a tracker on the headset.
